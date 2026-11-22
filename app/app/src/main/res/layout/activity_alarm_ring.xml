@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ringRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#262B38"
+    android:keepScreenOn="true">
+
+    <View
+        android:id="@+id/ringGlow"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/ringCard"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#FFFDFB"
+        android:elevation="24dp"
+        android:orientation="vertical"
+        android:paddingStart="30dp"
+        android:paddingTop="34dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/ringDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:background="#F58D82" />
+
+            <TextView
+                android:id="@+id/ringStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.12"
+                android:text="@string/alarm_ringing"
+                android:textColor="#F58D82"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ringTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.065"
+                android:text="7:00"
+                android:textColor="#242228"
+                android:textSize="72sp" />
+
+            <TextView
+                android:id="@+id/ringPeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginBottom="9dp"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:text="@string/am"
+                android:textColor="#918981"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ringName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/alarm"
+            android:textColor="#242228"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/ringDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="27dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Slow Rise · Mon Wed Fri"
+            android:textColor="#918981"
+            android:textSize="11.5sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ringSnoozeButton"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:background="#FFFDFB"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:stateListAnimator="@null"
+                android:text="@string/snooze_five"
+                android:textAllCaps="false"
+                android:textColor="#242228"
+                android:textSize="12.5sp" />
+
+            <Button
+                android:id="@+id/ringStopButton"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="#F58D82"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:stateListAnimator="@null"
+                android:text="@string/stop"
+                android:textAllCaps="false"
+                android:textColor="#FFFAF8"
+                android:textSize="12.5sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
