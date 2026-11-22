@@ -1,30 +1,41 @@
 # Phoenix Alarm
 
-A calm alarm clock web app built with React and Vite, inspired by the light/dark mobile alarm designs in the reference image.
+Calm React + Vite web alarm clock with two phone-like alarm cards (morning/night).
 
-## Run it
+## Run
 
 ```bash
 bun install
 bun run dev
 ```
 
-Open the local URL printed by Vite. To build for production:
+Open the Vite URL. Production build:
 
 ```bash
 bun run build
 bun run preview
 ```
 
-## Features
+## Structure
 
-- **Two independent alarms** — a warm morning alarm and a cool night alarm, shown side by side.
-- **Circular alarm cards** — tap the time to open a custom time picker with AM/PM and five-minute steps.
-- **Day repeat picker** — toggle any day; the repeat summary updates automatically.
-- **Alarm sounds** — choose from four gentle tones with an instant audio preview.
-- **Snooze toggle** — per-alarm snooze preference.
-- **Save and reset** — saves each alarm to `localStorage`; reset restores that alarm's defaults.
-- **Live alarm ringing** — when a saved alarm matches the current time and day, a ringing screen appears with a chime, snooze, and stop controls.
-- **Responsive layout** — the two phones sit side by side on desktop and stack on smaller screens.
+Web (React + Vite): `src/` — `main.jsx`, `App.jsx`, `alarms.js`, `audio.js`, `components/`, `styles.css`.
+Android (Java, minSdk 27): `app/` — Gradle project `PhoenixAlarm`.
 
-Alarms ring while the page is open. Browsers may require a click (for example, pressing **Save**) before audio can play.
+## Run
+
+Web: see above. Android:
+
+```bash
+cd app && ./gradlew assembleDebug
+```
+
+## Features (both)
+
+- Two alarms (light/dark), time picker (5-min steps, AM/PM).
+- Day repeat picker with summary.
+- 4 sounds with preview.
+- Snooze toggle, save/reset, persistence.
+- Live ringing with chime, snooze (5 min), stop.
+- Responsive (web) / native Android UI.
+
+Alarms ring while app open; browsers may need a click (Save) before audio.
